@@ -16,6 +16,8 @@ Please note that this doesn't try to be fast / optimal. And all cubes here have 
 
 It's just a simplest example how to easily create / modify / remove many cubes.
 
+It uses https://castle-engine.io/occlusion_culling . Though it doesn't have a city-on-foot view that would best benefit from occlusion culling. Your view may be better for occlusion culling.
+
 Using [Castle Game Engine](https://castle-engine.io/).
 
 ## Building

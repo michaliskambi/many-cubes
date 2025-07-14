@@ -82,6 +82,7 @@
         ]
       },
       "Name" : "Viewport1",
+      "OcclusionCulling" : true,
       "$NonVisualComponents" : [
         {
           "$$ClassName" : "TCastleBackground",
