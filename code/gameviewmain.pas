@@ -56,6 +56,16 @@ procedure TViewMain.Start;
       RandomFloatRange(-10, 10)
     );
 
+    { Disabling blending by this line make a small benefit when rendering
+      10k cubes (NumCubes = 10000). Doesn't matter for 1k cubes.
+
+      You generally should not need to disable blending like this.
+      But in this demo, with 10k cubes, explicitly disabling blending
+      on them speeds up the rendering (due to per-shape blending detection
+      not cached properly now in the engine; eventually this should be improved
+      in the engine, and then this line should be pointless). }
+    Result.RenderOptions.Blending := false;
+
     // randomize size
     Size := RandomFloatRange(1, 3);
     Result.Size := Vector3(Size, Size, Size);
