@@ -2,6 +2,14 @@
 
 Simplest cube creation / modification / removal for https://forum.castle-engine.io/t/drawing-many-cubes-faster/ .
 
+Functionality:
+
+- Creates 1000 cubes by default (edit code to easily increase it).
+- Key Q removes cube under the mouse cursor.
+- Key E changes random cube's color.
+- Key O toggles occlusion culling.
+- You can also use standard "Examine" navigation with mouse and keyboard.
+
 Please note that this doesn't try to be fast / optimal. And all cubes here have different size and color. E.g.
 
 - This example doesn't try to group cubes and render them using `TCastleTransformReference`. In many actual cases, you don't have 1000 different objects, you have 1000 instances of the few same object(s), and you can optimize it with `TCastleTransformReference`.

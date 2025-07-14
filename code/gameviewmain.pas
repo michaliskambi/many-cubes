@@ -115,6 +115,13 @@ begin
     WritelnLog('Changed color of cube %d', [RandomCubeIndex]);
     Exit(true); // key was handled
   end;
+
+  if Event.IsKey(keyO) then
+  begin
+    Viewport1.OcclusionCulling := not Viewport1.OcclusionCulling;
+    WritelnLog('Occlusion culling is now %s', [BoolToStr(Viewport1.OcclusionCulling, true)]);
+    Exit(true); // key was handled
+  end;
 end;
 
 end.
